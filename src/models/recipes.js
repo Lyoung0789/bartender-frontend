@@ -16,9 +16,35 @@ class Recipe {
         Api.get()
         .then(recipes=> {
             recipes.forEach(recipe => new Recipe(recipe))
-            debugger
-            Recipe.renderPosts()
+            // debugger
+            Recipe.renderRecipes()
         })
     }
+
+    static renderRecipes(){
+        recipeList.innerHTML = ""
+        // debugger
+        Recipe.all.forEach(recipe => recipe.renderRecipe())
+
+    }
+
+    renderRecipe(){
+        // debugger
+        recipeList.innerHTML+= this.htmlifyPost()
+    }
+
+    htmlifyPost(){
+        return(`
+            <div class ="block">
+                <div class="recipe-content" id = "${this.id}">
+                <h4>${this.title}<h4>
+                <p>${this.instructions}</p>
+                <p>${this.liquor}</p>
+                <p>${this.likes}</p>
+                </div>
+            </div>
+        `)
+    }
+
 
 }

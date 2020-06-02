@@ -1,0 +1,6 @@
+.recipe-content{
+    height: 600px;
+    overflow: scroll;
+    overflow-x: hidden; 
+    /* background-color: red;  */
+}
