@@ -3,9 +3,12 @@ class Api {
         this.baseUrl = 'http://localhost:3000'
     }
 
-    static getRecipes(){
-        const response = await fetch(this.baseUrl + '/recipes')
-        return response.json()
+    static get(){
+        return (
+            fetch('http://localhost:3000/recipes')
+            .then (response => response.json())
+        )
+        
     }
 }
 
