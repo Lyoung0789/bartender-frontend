@@ -22,7 +22,7 @@ class Recipe {
     }
 
     static renderRecipes(){
-        recipeList.innerHTML = ""
+        recipeList.innerHTML = "<h3>Cocktail Recipes<h3>"
         // debugger
         Recipe.all.forEach(recipe => recipe.renderRecipe())
 
