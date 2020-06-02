@@ -12,7 +12,7 @@ class Api {
     }
 
     static post(data){
-        // debugger
+        
 
         let configObj = {
             method: "POST",

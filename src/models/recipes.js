@@ -4,7 +4,7 @@ class Recipe {
         this.id = id
         this.title = title
         this.instructions = instructions
-        this.liqour = liquor
+        this.liquor = liquor
         this.created_at = created_at
         this.review = reviews
         this.likes = likes
@@ -34,13 +34,17 @@ class Recipe {
     }
 
     htmlifyPost(){
+        
         return(`
             <div class ="block">
                 <div class="recipe-content" id = "${this.id}">
                 <h4>${this.title}<h4>
                 <p>${this.instructions}</p>
                 <p>${this.liquor}</p>
-                <p>${this.likes}</p>
+                
+
+
+                <div class="love"><span class="like-glyph">&#128077</span> ${this.likes}</div>
                 </div>
             </div>
         `)
