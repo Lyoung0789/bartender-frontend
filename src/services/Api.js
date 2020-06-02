@@ -32,13 +32,13 @@ class Api {
         
         .then(response => response.json())
         .then ((data)=> {
-            // debugger
+            
             if (!data.errors){
                 
                 new Recipe(data)
                 Recipe.renderRecipes()
                 clearForm()
-                // debugger
+                
             } else {
                 throw new Error(`${data.errors}`)
             }
