@@ -12,6 +12,7 @@ class Api {
     }
 
     static post(data){
+        // debugger
 
         let configObj = {
             method: "POST",
@@ -28,14 +29,16 @@ class Api {
         }
 
         fetch("http://localhost:3000/recipes", configObj)
+        
         .then(response => response.json())
         .then ((data)=> {
+            // debugger
             if (!data.errors){
                 
                 new Recipe(data)
                 Recipe.renderRecipes()
                 clearForm()
-                debugger
+                // debugger
             } else {
                 throw new Error(`${data.errors}`)
             }
