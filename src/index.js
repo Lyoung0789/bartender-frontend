@@ -1,5 +1,5 @@
 let addRecipe = false
-// let commentsOn = false
+
 
 document.addEventListener("DOMContentLoaded", function(){
     // debugger
@@ -76,7 +76,7 @@ function showNewRecipe(){
 }
 
 function showCommentsFeature(){
-    let commentsOn = false
+    
     const showComments = document.querySelectorAll(".comment-button")
     // const showCommentsContainer = document.querySelector("")
     for(showComment of showComments){
