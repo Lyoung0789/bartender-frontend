@@ -52,10 +52,10 @@ class Recipe {
 
                 let latestReview = new Review(review)
                 correctRecipe.innerHTML += latestReview.htmlifyReview()
-                debugger
+                // debugger
             })
             
-            // const correctRecipe = document.getElementById(`${this.id}`)
+            
             
             
 
@@ -75,7 +75,7 @@ class Recipe {
                 <p>${this.liquor}</p>
                 <p class = "likes">${this.likes}</p>
                 <button class="like-glyph">&#128077</button> 
-                <button class="comment-button">Show All Comments</button>
+                <button class="comment-button">Comments</button>
                 
                 </div>
 

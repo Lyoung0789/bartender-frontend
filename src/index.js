@@ -102,7 +102,7 @@ function getComments(){
 
     } else {
         for(container of showReviewList){
-            container.style.display ="none"
+            container.style.display = "none"
         }
         
     }

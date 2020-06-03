@@ -23,6 +23,19 @@ class Review{
        
         
     }
+
+    createReviewForm(){
+        return (`
+        <form id ="new-review-form">
+            <div id="form-header"><h2>Add a comment!</h2></div>
+            <div class="form-review-name"><input type="text" id="name" placeholder="Your Name"/></div>
+            
+            <div class="form-review-content"><textarea name="content" id="content" cols="50" rows="10" placeholder="Add Your Review"></textarea></div>
+            <input type="submit"/>
+        </form>
+        
+        `)
+    }
     
 }
 
