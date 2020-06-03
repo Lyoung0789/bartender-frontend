@@ -72,3 +72,18 @@ function showNewRecipe(){
         }
     })
 }
+
+function showCommentsFeature(){
+    let showComments = document.querySelectorAll(".comment-button")
+    for(showComment of showComments){
+        showComment.addEventListener("click", ()=>{
+            console.log("Gathering all comments for this recipe")
+        })
+    }
+    
+
+    // $("#commentButton").one("click", function(event) {
+    //     event.preventDefault()
+    //     showAllComments(event)
+    //   })
+}

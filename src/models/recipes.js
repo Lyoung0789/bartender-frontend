@@ -26,6 +26,7 @@ class Recipe {
         // debugger
         Recipe.all.forEach(recipe => recipe.renderRecipe())
         likeFeature()
+        showCommentsFeature()
 
     }
 
@@ -44,6 +45,7 @@ class Recipe {
                 <p>${this.liquor}</p>
                 <p class = "likes">${this.likes}</p>
                 <button class="like-glyph">&#128077</button> 
+                <button class="comment-button">Show All Comments</button>
                 </div>
 
             </div>
