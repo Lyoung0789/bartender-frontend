@@ -1,4 +1,7 @@
 class Review{
+
+    
+
     constructor({id, name, content }){
         this.id = id, 
         this.name = name, 
@@ -8,15 +11,16 @@ class Review{
 
     htmlifyReview(){
         // debugger
+        
         let htmlReview = `
-            <div class="comment-container">
+            <div class="review-container" style="display:none">
                 <h4>${this.name}</h4>
                 <p>${this.content}<p>
             </div>
         `
-
+        
         recipeList.innerHTML += htmlReview
-        debugger
+        
     }
     
 }

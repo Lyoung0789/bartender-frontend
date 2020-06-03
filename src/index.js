@@ -1,4 +1,5 @@
 let addRecipe = false
+let showComments = false
 
 document.addEventListener("DOMContentLoaded", function(){
     // debugger
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
+
 
 
 
@@ -74,7 +76,8 @@ function showNewRecipe(){
 }
 
 function showCommentsFeature(){
-    let showComments = document.querySelectorAll(".comment-button")
+    const showComments = document.querySelectorAll(".comment-button")
+    // const showCommentsContainer = document.querySelector("")
     for(showComment of showComments){
         showComment.addEventListener("click", getComments)
     }
@@ -82,5 +85,11 @@ function showCommentsFeature(){
 }
 
 function getComments(){
-    debugger
+    const showReviewList = document.querySelector('.review-container')
+    showComments = !showComments
+    if (showComments){
+        showReviewList.style.display ="block"
+    } else {
+        showReviewList.style.display ="none"
+    }
 }

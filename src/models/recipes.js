@@ -34,11 +34,12 @@ class Recipe {
         
         
         recipeList.innerHTML+= this.htmlifyPost()
+
         if (this.review.length !== 0){
             // debugger
             let latestReview = new Review(this.review[0])
             // debugger
-            recipeList.InnerHTML += latestReview.htmlifyReview()
+            latestReview.htmlifyReview()
         }
        
     }
@@ -54,6 +55,7 @@ class Recipe {
                 <p class = "likes">${this.likes}</p>
                 <button class="like-glyph">&#128077</button> 
                 <button class="comment-button">Show All Comments</button>
+                
                 </div>
 
             </div>
