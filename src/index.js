@@ -1,6 +1,7 @@
 let addRecipe = false
 
 document.addEventListener("DOMContentLoaded", function(){
+    // debugger
     Recipe.getRecipes()
     showNewRecipe()
     mountFormListener()
@@ -9,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
-const showFormButton = document.querySelector("#add-recipe-button")
-const showFormContainer = document.querySelector(".form-container")
+
 
 
 function mountFormListener(){
@@ -61,10 +61,12 @@ async function sendLike(event){
 
 function showNewRecipe(){
     // debugger
+    const showFormButton = document.querySelector("#add-recipe-button")
+    const showFormContainer = document.querySelector(".form-container")
     showFormButton.addEventListener("click", () => {
         addRecipe = !addRecipe
         if (addRecipe){
-            showFormContainer.style.display = 'block'
+            showFormContainer.style.display = "block"
         } else {
             showFormContainer.style.display = "none"
         }
