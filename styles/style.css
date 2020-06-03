@@ -10,7 +10,7 @@
     width: stretch;
     height: auto;
     display: none;
-    background: #515DA2;
+    background: #878f99;
     opacity: .8;
     
   }
@@ -19,4 +19,7 @@
       width: 80%;
   }
 
- 
+ .block{
+    background:#a2b9bc;
+    width: 80%
+ }
