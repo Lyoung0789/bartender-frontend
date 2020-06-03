@@ -47,7 +47,7 @@ function likeFeature(){
 }
 
 async function sendLike(event){
-    
+    debugger
     const likeId = event.target.parentElement.id
     let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
     likes++
@@ -76,14 +76,11 @@ function showNewRecipe(){
 function showCommentsFeature(){
     let showComments = document.querySelectorAll(".comment-button")
     for(showComment of showComments){
-        showComment.addEventListener("click", ()=>{
-            console.log("Gathering all comments for this recipe")
-        })
+        showComment.addEventListener("click", getComments)
     }
     
+}
 
-    // $("#commentButton").one("click", function(event) {
-    //     event.preventDefault()
-    //     showAllComments(event)
-    //   })
+function getComments(){
+    debugger
 }

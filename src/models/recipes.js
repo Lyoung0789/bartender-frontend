@@ -16,7 +16,7 @@ class Recipe {
         Api.get()
         .then(recipes=> {
             recipes.forEach(recipe => new Recipe(recipe))
-            // debugger
+            
             Recipe.renderRecipes()
         })
     }
@@ -31,8 +31,16 @@ class Recipe {
     }
 
     renderRecipe(){
-        // debugger
+        
+        
         recipeList.innerHTML+= this.htmlifyPost()
+        if (this.review.length !== 0){
+            // debugger
+            let latestReview = new Review(this.review[0])
+            // debugger
+            recipeList.InnerHTML += latestReview.htmlifyReview()
+        }
+       
     }
 
     htmlifyPost(){

@@ -1,12 +1,25 @@
-// class Review{
-//     constructor({id, name, comment }){
-//         this.id = id, 
-//         this.name = name, 
-//         this.comment = comment
-//     }
+class Review{
+    constructor({id, name, content }){
+        this.id = id, 
+        this.name = name, 
+        this.content = content
+        // debugger
+    }
 
+    htmlifyReview(){
+        // debugger
+        let htmlReview = `
+            <div class="comment-container">
+                <h4>${this.name}</h4>
+                <p>${this.content}<p>
+            </div>
+        `
+
+        recipeList.innerHTML += htmlReview
+        debugger
+    }
     
-// }
+}
 
 // Review.prototype.postHTML = function(){
 //     return (`
