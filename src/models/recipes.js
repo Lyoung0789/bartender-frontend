@@ -35,7 +35,7 @@ class Recipe {
     }
 
     htmlifyPost(){
-        debugger
+        // debugger
         return(`
             <div class="block">
                 <div class="recipe-content" id = "${this.id}">
@@ -46,9 +46,6 @@ class Recipe {
                 <button class="like-glyph">&#128077</button> 
                 </div>
 
-                <div class ="reviews">
-                    <p>$
-                </div>
             </div>
         `)
     }
