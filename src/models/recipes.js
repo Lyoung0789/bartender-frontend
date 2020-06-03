@@ -27,6 +27,7 @@ class Recipe {
         Recipe.all.forEach(recipe => recipe.renderRecipe())
         likeFeature()
         showCommentsFeature()
+        mountCommentListener()
 
     }
 
@@ -51,7 +52,6 @@ class Recipe {
             const correctRecipe = document.getElementById(`${this.id}`)
             
             this.review.forEach(review => {
-
                 let latestReview = new Review(review)
                 correctRecipe.innerHTML += latestReview.htmlifyReview()
                 // debugger
@@ -79,10 +79,9 @@ class Recipe {
                 <button class="like-glyph">&#128077</button> 
                 <button class="comment-button">Comments</button>
                     <div class ="review-container" style="display:none">
-                        <form>
+                        <form id = "new-review-form">
                             <div id="form-header"><h2>Add a comment!</h2></div>
                             <div class="form-review-name"><input type="text" id="name" placeholder="Your Name"/></div>
-                            
                             <div class="form-review-content"><textarea name="content" id="content" cols="50" rows="10" placeholder="Add Your Review"></textarea></div>
                             <input type="submit"/>
                         </form>

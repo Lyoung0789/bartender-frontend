@@ -7,8 +7,11 @@ document.addEventListener("DOMContentLoaded", function(){
     showNewRecipe()
     mountFormListener()
     
+    mountCommentListener()
+    // const commentForm = document.querySelectorAll("#new-review-form")
+    
 })
-
+// debugger
 const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
 
@@ -16,9 +19,10 @@ const recipeForm = document.querySelector("#new-recipe-form")
 
 
 function mountFormListener(){
+    
     recipeForm.addEventListener("submit", function(event){
         event.preventDefault()
-        console.log("not is being createed")
+        console.log("Recipe is being createed")
         const recipeObj = getRecipeData()
         Api.post(recipeObj)
         // debugger
@@ -108,4 +112,28 @@ function getComments(){
         
     }
 
+}
+
+function mountCommentListener(){
+    // debugger
+    // event.preventDefault()
+    let commentForm = document.querySelectorAll("#new-review-form")
+    for(comment of commentForm){
+        // debugger
+        comment.addEventListener("submit", postComment)
+    }
+    
+    // .addEventListener("submit", function(event){
+    //     event.preventDefault()
+    //     console.log("Recipe is being createed")
+    //     const recipeObj = getRecipeData()
+    //     Api.post(recipeObj)
+    //     // debugger
+
+    // })
+
+}
+
+function postComment(){
+    debugger
 }
