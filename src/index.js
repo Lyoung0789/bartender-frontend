@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
 const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
 
+
 function mountFormListener(){
     recipeForm.addEventListener("submit", function(event){
         event.preventDefault()
@@ -29,5 +30,25 @@ function clearForm(){
     document.querySelector("#title").value = ""
     document.querySelector("#liquor").value = ""
     document.querySelector("#instructions").value = ""
+
+}
+
+function likeFeature(){
+    let thumbs = document.querySelectorAll(".like-glyph")
+    for(thumbs of thumbs){
+        thumbs.addEventListener("click", sendLike)
+    }
+}
+
+async function sendLike(event){
+    
+    const likeId = event.target.parentElement.id
+    let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
+    likes++
+    const recipeObj = {
+        likes
+    }
+    Api.patch(recipeObj, likeId)
+
 
 }

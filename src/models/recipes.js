@@ -25,6 +25,7 @@ class Recipe {
         recipeList.innerHTML = "<h3>Cocktail Recipes<h3>"
         // debugger
         Recipe.all.forEach(recipe => recipe.renderRecipe())
+        likeFeature()
 
     }
 
@@ -38,13 +39,11 @@ class Recipe {
         return(`
             <div class ="block">
                 <div class="recipe-content" id = "${this.id}">
-                <h4>${this.title}<h4>
+                <p>${this.title}<p>
                 <p>${this.instructions}</p>
                 <p>${this.liquor}</p>
-                
-
-
-                <div class="love"><span class="like-glyph">&#128077</span> ${this.likes}</div>
+                <p class = "likes">${this.likes}</p>
+                <button class="like-glyph">&#128077</button> 
                 </div>
             </div>
         `)

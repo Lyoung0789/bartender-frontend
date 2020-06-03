@@ -45,5 +45,10 @@ class Api {
         })
         .catch(alert)
     }
+
+
+    static patch(data, id){
+
+    }
 }
 
