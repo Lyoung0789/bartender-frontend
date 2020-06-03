@@ -34,6 +34,7 @@ class Recipe {
         
         
         recipeList.innerHTML+= this.htmlifyPost()
+        // recipeList.innerHTML += Review.createReviewForm()
 
         //This is where i need to add more comments.
         // if (this.review.length !== 0){
@@ -48,6 +49,7 @@ class Recipe {
 
         if (this.review.length !== 0){
             const correctRecipe = document.getElementById(`${this.id}`)
+            
             this.review.forEach(review => {
 
                 let latestReview = new Review(review)
@@ -76,7 +78,15 @@ class Recipe {
                 <p class = "likes">${this.likes}</p>
                 <button class="like-glyph">&#128077</button> 
                 <button class="comment-button">Comments</button>
-                
+                    <div class ="review-container" style="display:none">
+                        <form>
+                            <div id="form-header"><h2>Add a comment!</h2></div>
+                            <div class="form-review-name"><input type="text" id="name" placeholder="Your Name"/></div>
+                            
+                            <div class="form-review-content"><textarea name="content" id="content" cols="50" rows="10" placeholder="Add Your Review"></textarea></div>
+                            <input type="submit"/>
+                        </form>
+                    </div>
                 </div>
 
             </div>
