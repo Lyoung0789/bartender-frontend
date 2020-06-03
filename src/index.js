@@ -89,15 +89,22 @@ function getComments(){
     
     
     const findId = document.getElementById(`${this.parentElement.id}`)
-    const showReviewList = findId.querySelector('.review-container')
+    const showReviewList = findId.querySelectorAll('.review-container')
     // debugger
     
     
     
-    if (showReviewList.style.display === "none"){
-        showReviewList.style.display ="block"
+    if (showReviewList[0].style.display === "none"){
+        for (container of showReviewList){
+            container.style.display ="block"
+        }
+        
+
     } else {
-        showReviewList.style.display ="none"
+        for(container of showReviewList){
+            container.style.display ="none"
+        }
+        
     }
 
 }

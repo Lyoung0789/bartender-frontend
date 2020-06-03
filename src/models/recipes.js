@@ -35,15 +35,33 @@ class Recipe {
         
         recipeList.innerHTML+= this.htmlifyPost()
 
+        //This is where i need to add more comments.
+        // if (this.review.length !== 0){
+            
+        //     let latestReview = new Review(this.review[0])
+            
+        //     const correctRecipe = document.getElementById(`${this.id}`)
+            
+        //     correctRecipe.innerHTML += latestReview.htmlifyReview()
+
+        // }
+
         if (this.review.length !== 0){
-            
-            let latestReview = new Review(this.review[0])
-            
             const correctRecipe = document.getElementById(`${this.id}`)
+            this.review.forEach(review => {
+
+                let latestReview = new Review(review)
+                correctRecipe.innerHTML += latestReview.htmlifyReview()
+                debugger
+            })
             
-            correctRecipe.innerHTML += latestReview.htmlifyReview()
+            // const correctRecipe = document.getElementById(`${this.id}`)
+            
+            
 
         }
+
+
        
     }
 
