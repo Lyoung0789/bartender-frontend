@@ -1,5 +1,5 @@
 let addRecipe = false
-let showComments = false
+// let commentsOn = false
 
 document.addEventListener("DOMContentLoaded", function(){
     // debugger
@@ -49,7 +49,7 @@ function likeFeature(){
 }
 
 async function sendLike(event){
-    debugger
+    // debugger
     const likeId = event.target.parentElement.id
     let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
     likes++
@@ -76,6 +76,7 @@ function showNewRecipe(){
 }
 
 function showCommentsFeature(){
+    let commentsOn = false
     const showComments = document.querySelectorAll(".comment-button")
     // const showCommentsContainer = document.querySelector("")
     for(showComment of showComments){
@@ -85,11 +86,18 @@ function showCommentsFeature(){
 }
 
 function getComments(){
-    const showReviewList = document.querySelector('.review-container')
-    showComments = !showComments
-    if (showComments){
+    
+    
+    const findId = document.getElementById(`${this.parentElement.id}`)
+    const showReviewList = findId.querySelector('.review-container')
+    // debugger
+    
+    
+    
+    if (showReviewList.style.display === "none"){
         showReviewList.style.display ="block"
     } else {
         showReviewList.style.display ="none"
     }
+
 }

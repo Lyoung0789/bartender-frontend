@@ -6,20 +6,20 @@ class Review{
         this.id = id, 
         this.name = name, 
         this.content = content
-        // debugger
+        
     }
 
     htmlifyReview(){
-        // debugger
+       
         
-        let htmlReview = `
+        return (`
             <div class="review-container" style="display:none">
                 <h4>${this.name}</h4>
                 <p>${this.content}<p>
             </div>
-        `
+        `)
         
-        recipeList.innerHTML += htmlReview
+       
         
     }
     

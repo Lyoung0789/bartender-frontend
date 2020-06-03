@@ -36,10 +36,13 @@ class Recipe {
         recipeList.innerHTML+= this.htmlifyPost()
 
         if (this.review.length !== 0){
-            // debugger
+            
             let latestReview = new Review(this.review[0])
-            // debugger
-            latestReview.htmlifyReview()
+            
+            const correctRecipe = document.getElementById(`${this.id}`)
+            
+            correctRecipe.innerHTML += latestReview.htmlifyReview()
+
         }
        
     }
