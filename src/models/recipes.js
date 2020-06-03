@@ -37,7 +37,7 @@ class Recipe {
     htmlifyPost(){
         
         return(`
-            <div class="block p-3 my-3 bg-dark text-white ">
+            <div class="block">
                 <div class="recipe-content" id = "${this.id}">
                 <p>${this.title}<p>
                 <p>${this.instructions}</p>

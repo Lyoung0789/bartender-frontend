@@ -1,8 +1,9 @@
 .recipe-container{
-    height: 600px;
+    height: 800px;
+    width: 50%;
     overflow: scroll;
     overflow-x: hidden; 
-    /* background-color: red;  */
+    
 }
 
 .form-container {
