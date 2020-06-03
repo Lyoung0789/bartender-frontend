@@ -120,7 +120,17 @@ function mountCommentListener(){
     let commentForm = document.querySelectorAll("#new-review-form")
     for(comment of commentForm){
         // debugger
-        comment.addEventListener("submit", postComment)
+        comment.addEventListener("submit", function(event){
+            event.preventDefault()
+            debugger
+            console.log("Review is being created")
+            //This is where i need to do some work. 
+            //getReviewData pulls in the data we wrote
+            //API.ReviewPost(reviewObj)
+            const reviewObj = getReviewData()
+            API.postReview(reviewObj)
+
+        })
     }
     
     // .addEventListener("submit", function(event){
@@ -134,6 +144,3 @@ function mountCommentListener(){
 
 }
 
-function postComment(){
-    debugger
-}
