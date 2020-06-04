@@ -122,25 +122,23 @@ function mountCommentListener(){
         // debugger
         comment.addEventListener("submit", function(event){
             event.preventDefault()
-            debugger
+            // debugger
             console.log("Review is being created")
             //This is where i need to do some work. 
             //getReviewData pulls in the data we wrote
             //API.ReviewPost(reviewObj)
-            const reviewObj = getReviewData()
+            const reviewObj = {
+                name: this.name.value,
+                content: this.content.value,
+                recipe_id: this.parentElement.parentElement.id
+            }
+            debugger
             API.postReview(reviewObj)
 
         })
     }
-    
-    // .addEventListener("submit", function(event){
-    //     event.preventDefault()
-    //     console.log("Recipe is being createed")
-    //     const recipeObj = getRecipeData()
-    //     Api.post(recipeObj)
-    //     // debugger
-
-    // })
 
 }
+
+
 
