@@ -2,11 +2,12 @@ class Review{
 
     
 
-    constructor({id, name, content, created_at}){
+    constructor({id, name, content, created_at, recipe_id}){
         this.id = id, 
         this.name = name, 
         this.content = content
         this.created_at = created_at
+        this.recipe_id = recipe_id
         
     }
 
@@ -22,6 +23,18 @@ class Review{
         
        
         
+    }
+
+    htmlifyNewReview(){
+        return (`
+        <div class="review-container" style="display:block">
+            <h4>${this.name} ${this.created_at}</h4>
+            <p>${this.content}<p>
+        </div>
+    `)
+    
+   
+
     }
 
     // static createReviewForm(){

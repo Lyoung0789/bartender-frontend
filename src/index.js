@@ -91,7 +91,7 @@ function showCommentsFeature(){
 
 function getComments(){
     
-    
+    // debugger
     const findId = document.getElementById(`${this.parentElement.id}`)
     const showReviewList = findId.querySelectorAll('.review-container')
     // const findReviewForm = document.getElementById()
@@ -132,8 +132,8 @@ function mountCommentListener(){
                 content: this.content.value,
                 recipe_id: this.parentElement.parentElement.id
             }
-            debugger
-            API.postReview(reviewObj)
+            // debugger
+            Api.postReview(reviewObj)
 
         })
     }
