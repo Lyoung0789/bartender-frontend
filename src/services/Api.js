@@ -59,7 +59,7 @@ class Api {
                 likes: data.likes
             })
         }
-        // debugger
+        
         fetch(`http://localhost:3000/recipes/${id}`, configObj)
         .then(response => response.json())
         .then((data)=> {
