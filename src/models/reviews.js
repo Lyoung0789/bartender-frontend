@@ -1,7 +1,5 @@
 class Review{
 
-    
-
     constructor({id, name, content, created_at, recipe_id}){
         this.id = id, 
         this.name = name, 

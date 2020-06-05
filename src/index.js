@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", function(){
     Recipe.getRecipes()
     showNewRecipe()
     mountFormListener()
-    
     mountCommentListener()
-    // const commentForm = document.querySelectorAll("#new-review-form")
+    
     
 })
-// debugger
+
 const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
 
@@ -140,5 +139,6 @@ function mountCommentListener(){
 
 }
 
+//for errors
 
 
