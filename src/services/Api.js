@@ -13,7 +13,7 @@ class Api {
 
     static post(data){
         
-
+        
         let configObj = {
             method: "POST",
             headers: {

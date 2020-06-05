@@ -54,6 +54,21 @@ class Recipe {
        
     }
 
+//new functions below
+
+    static getRecipeData(){
+        return {
+            title: document.querySelector("#title").value,
+            liquor: document.querySelector("#liquor").value,
+            instructions: document.querySelector("#instructions").value
+        }
+    }
+// new functions above
+
+
+
+
+
     htmlifyPost(){
         return(`
             <div class="block">
