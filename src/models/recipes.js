@@ -23,7 +23,6 @@ class Recipe {
 
     static renderRecipes(){
         recipeList.innerHTML = "<h3>Cocktail Recipes<h3>"
-        // debugger
         Recipe.all.forEach(recipe => recipe.renderRecipe())
         likeFeature()
         showCommentsFeature()
@@ -43,7 +42,6 @@ class Recipe {
             this.review.forEach(review => {
                 let latestReview = new Review(review)
                 correctRecipe.innerHTML += latestReview.htmlifyReview()
-                // debugger
             })
             
             
@@ -57,7 +55,6 @@ class Recipe {
     }
 
     htmlifyPost(){
-        // debugger
         return(`
             <div class="block">
                 <div class="recipe-content" id = "${this.id}">

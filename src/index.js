@@ -2,13 +2,10 @@ let addRecipe = false
 
 
 document.addEventListener("DOMContentLoaded", function(){
-    // debugger
     Recipe.getRecipes()
     showNewRecipe()
     mountFormListener()
-    mountCommentListener()
-    
-    
+    mountCommentListener() 
 })
 
 const recipeList = document.querySelector(".recipe-container")
@@ -24,8 +21,6 @@ function mountFormListener(){
         console.log("Recipe is being createed")
         const recipeObj = getRecipeData()
         Api.post(recipeObj)
-        // debugger
-
     })
 }
 
@@ -52,7 +47,6 @@ function likeFeature(){
 }
 
 async function sendLike(event){
-    // debugger
     const likeId = event.target.parentElement.id
     let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
     likes++
@@ -65,7 +59,7 @@ async function sendLike(event){
 }
 
 function showNewRecipe(){
-    // debugger
+    
     const showFormButton = document.querySelector("#add-recipe-button")
     const showFormContainer = document.querySelector(".form-container")
     showFormButton.addEventListener("click", () => {
@@ -81,7 +75,6 @@ function showNewRecipe(){
 function showCommentsFeature(){
     
     const showComments = document.querySelectorAll(".comment-button")
-    // const showCommentsContainer = document.querySelector("")
     for(showComment of showComments){
         showComment.addEventListener("click", getComments)
     }
@@ -90,11 +83,10 @@ function showCommentsFeature(){
 
 function getComments(){
     
-    // debugger
+    
     const findId = document.getElementById(`${this.parentElement.id}`)
     const showReviewList = findId.querySelectorAll('.review-container')
-    // const findReviewForm = document.getElementById()
-    // debugger
+
     
     
     
@@ -114,14 +106,13 @@ function getComments(){
 }
 
 function mountCommentListener(){
-    // debugger
-    // event.preventDefault()
+
     let commentForm = document.querySelectorAll("#new-review-form")
     for(comment of commentForm){
-        // debugger
+        
         comment.addEventListener("submit", function(event){
             event.preventDefault()
-            // debugger
+            
             console.log("Review is being created")
             //This is where i need to do some work. 
             //getReviewData pulls in the data we wrote
@@ -131,7 +122,7 @@ function mountCommentListener(){
                 content: this.content.value,
                 recipe_id: this.parentElement.parentElement.id
             }
-            // debugger
+           
             Api.postReview(reviewObj)
 
         })
@@ -139,6 +130,6 @@ function mountCommentListener(){
 
 }
 
-//for errors
+
 
 
