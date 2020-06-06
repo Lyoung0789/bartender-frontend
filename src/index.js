@@ -13,7 +13,6 @@ const recipeForm = document.querySelector("#new-recipe-form")
 
 
 function mountFormListener(){
-    
     recipeForm.addEventListener("submit", function(event){
         event.preventDefault()
         console.log("Recipe is being createed")
@@ -31,22 +30,20 @@ function clearForm(){
 }
 
 function likeFeature(){
-    // debugger
     const thumbs = document.querySelectorAll(".like-glyph")
     for(thumb of thumbs){
-        thumb.addEventListener("click", sendLike)
+        thumb.addEventListener("click", function(event){
+            const likeId = event.target.parentElement.id
+            let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
+            likes++
+            const recipeObj = {
+                likes
+            }
+            Api.patch(recipeObj, likeId)
+        })
     }
 }
 
-function sendLike(event){
-    const likeId = event.target.parentElement.id
-    let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
-    likes++
-    const recipeObj = {
-        likes
-    }
-    Api.patch(recipeObj, likeId)
-}
 
 function displayNewRecipeForm(){
     
@@ -69,11 +66,3 @@ function showCommentsFeature(){
     }
     
 }
-
-
-
-
-
-
-
-

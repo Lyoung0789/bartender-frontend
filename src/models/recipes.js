@@ -30,7 +30,7 @@ class Recipe {
 
     }
 
-//new functions below
+
 
     static getRecipeData(){
         return {
@@ -39,7 +39,7 @@ class Recipe {
             instructions: document.querySelector("#instructions").value
         }
     }
-// new functions above
+
 
     renderRecipe(){
         recipeList.innerHTML+= this.htmlifyPost()

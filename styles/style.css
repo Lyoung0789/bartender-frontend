@@ -4,20 +4,14 @@
     margin-right: auto;
     width:80%;
     height: 800px;
-    
-    /* overflow: scroll; */
-    /* overflow-x: hidden;  */
-    
+     
 }
 
 .form-container {
     margin: auto;
     padding: 10px;
     width: 50%;
-    
-    background: #878f99;
-    
-    
+    background: #878f99;  
   }
 
   .new-recipe-form{
