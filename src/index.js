@@ -3,7 +3,7 @@ let addRecipe = false
 
 document.addEventListener("DOMContentLoaded", function(){
     Recipe.getRecipes()
-    showNewRecipe()
+    displayNewRecipeForm()
     mountFormListener()
     
 })
@@ -47,7 +47,7 @@ function sendLike(event){
     Api.patch(recipeObj, likeId)
 }
 
-function showNewRecipe(){
+function displayNewRecipeForm(){
     
     const showFormButton = document.querySelector("#add-recipe-button")
     const showFormContainer = document.querySelector(".form-container")
