@@ -62,6 +62,28 @@ class Review{
     }
 
 
+    static getComments(){
+        debugger
+        const findId = document.getElementById(`${this.parentElement.id}`)
+        const showReviewList = findId.querySelectorAll('.review-container')
+    
+        
+        if (showReviewList[0].style.display === "none"){
+            for (const container of showReviewList){
+                container.style.display ="block"
+            }
+            
+    
+        } else {
+            for(const container of showReviewList){
+                container.style.display = "none"
+            }
+            
+        }
+    
+    }
+
+
     
 }
 
