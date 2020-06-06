@@ -31,11 +31,7 @@ class Recipe {
     }
 
     renderRecipe(){
-        
-        
         recipeList.innerHTML+= this.htmlifyPost()
-  
-
         if (this.review.length !== 0){
             const correctRecipe = document.getElementById(`${this.id}`)
             
@@ -43,15 +39,7 @@ class Recipe {
                 let latestReview = new Review(review)
                 correctRecipe.innerHTML += latestReview.htmlifyReview()
             })
-            
-            
-            
-            
-
-        }
-
-
-       
+        }  
     }
 
 //new functions below

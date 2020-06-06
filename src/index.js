@@ -47,7 +47,7 @@ function likeFeature(){
     }
 }
 
-async function sendLike(event){
+function sendLike(event){
     const likeId = event.target.parentElement.id
     let likes = parseInt(event.target.parentElement.querySelector(".likes").innerText)
     likes++
@@ -55,8 +55,6 @@ async function sendLike(event){
         likes
     }
     Api.patch(recipeObj, likeId)
-
-
 }
 
 function showNewRecipe(){
@@ -74,16 +72,17 @@ function showNewRecipe(){
 }
 
 function showCommentsFeature(){
-    
+    // debugger
     const showComments = document.querySelectorAll(".comment-button")
     for(showComment of showComments){
+        // debugger
         showComment.addEventListener("click", getComments)
     }
     
 }
 
 function getComments(){
-    
+    // debugger
     const findId = document.getElementById(`${this.parentElement.id}`)
     const showReviewList = findId.querySelectorAll('.review-container')
 
