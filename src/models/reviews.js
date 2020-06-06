@@ -43,9 +43,9 @@ class Review{
             
             comment.addEventListener("submit", function(event){
                 event.preventDefault()
-                debugger
-                console.log("Review is being created")
                 
+                console.log("Review is being created")
+
                 const reviewObj = {
                     name: event.target.name.value,
                     content: event.target.content.value,

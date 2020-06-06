@@ -1,7 +1,5 @@
 class Api {
-    constructor(){
-        this.baseUrl = 'http://localhost:3000/recipes'
-    }
+
 
     static get(){
         return (
@@ -12,8 +10,7 @@ class Api {
     }
 
     static post(data){
-        
-        
+
         let configObj = {
             method: "POST",
             headers: {
