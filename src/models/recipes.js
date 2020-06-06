@@ -58,10 +58,10 @@ class Recipe {
         return(`
             <div class="block">
                 <div class="recipe-content" id = "${this.id}">
-                <p>${this.title}<p>
+                <strong><p>${this.title}<p></strong>
                 <p>${this.instructions}</p>
-                <p>${this.liquor}</p>
-                <p class = "likes">${this.likes}</p>
+                <p>Main Liquor: ${this.liquor}</p>
+                <p class = "likes">Likes: ${this.likes} Comments: ${this.review.length}</p>
                 <button class="like-glyph">&#128077</button> 
                 <button class="comment-button">Comments</button>
                     <div class ="review-container" style="display:none">
