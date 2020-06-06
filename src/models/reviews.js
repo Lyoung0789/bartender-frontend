@@ -43,14 +43,12 @@ class Review{
             
             comment.addEventListener("submit", function(event){
                 event.preventDefault()
-                
+                debugger
                 console.log("Review is being created")
-                //This is where i need to do some work. 
-                //getReviewData pulls in the data we wrote
-                //API.ReviewPost(reviewObj)
+                
                 const reviewObj = {
-                    name: this.name.value,
-                    content: this.content.value,
+                    name: event.target.name.value,
+                    content: event.target.content.value,
                     recipe_id: this.parentElement.parentElement.id
                 }
                
@@ -63,7 +61,6 @@ class Review{
 
 
     static getComments(){
-        debugger
         const findId = document.getElementById(`${this.parentElement.id}`)
         const showReviewList = findId.querySelectorAll('.review-container')
     
