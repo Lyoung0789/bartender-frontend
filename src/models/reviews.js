@@ -4,8 +4,9 @@ class Review{
         this.id = id, 
         this.name = name, 
         this.content = content
-        this.created_at = created_at
+        this.created_at = new Date(created_at)
         this.recipe_id = recipe_id
+        // debugger
         
     }
 
@@ -14,7 +15,8 @@ class Review{
         
         return (`
             <div class="review-container" style="display:none">
-                <h4>${this.name} ${this.created_at}</h4>
+                <h4>${this.name}</h4>
+                <p>${this.created_at}<p>
                 <p>${this.content}<p>
             </div>
         `)
@@ -26,7 +28,8 @@ class Review{
     htmlifyNewReview(){
         return (`
         <div class="review-container" style="display:block">
-            <h4>${this.name} ${this.created_at}</h4>
+            <h4>${this.name}</h4>
+            <p>${this.created_at}<p>
             <p>${this.content}<p>
         </div>
     `)
