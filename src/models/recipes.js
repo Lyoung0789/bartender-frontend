@@ -58,7 +58,7 @@ class Recipe {
         return(`
             <div class="block">
                 <div class="recipe-content" id = "${this.id}">
-                <strong><p>${this.title}<p></strong>
+                <h3>${this.title}</h3>
                 <p>${this.instructions}</p>
                 <p>Main Liquor: ${this.liquor}</p>
                 <p class = "likes"><u>Likes:</u> ${this.likes} <u>Comments:</u> ${this.review.length}</p>

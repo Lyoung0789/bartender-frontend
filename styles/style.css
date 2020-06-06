@@ -11,12 +11,12 @@
 }
 
 .form-container {
-    padding: 1rem;
-    width: stretch;
-    height: auto;
-    display: none;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    
     background: #878f99;
-    opacity: .8;
+    
     
   }
 
@@ -28,3 +28,4 @@
     background:#a2b9bc;
     width: 80%
  }
+
