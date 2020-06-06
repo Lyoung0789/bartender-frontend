@@ -28,12 +28,10 @@ class Api {
         
         .then(response => response.json())
         .then ((data)=> {
-            debugger
             if (!data.error){
                 new Recipe(data)
                 Recipe.renderRecipes()
-                clearForm()
-                
+                clearForm()   
             } else {
                 throw new Error(`${data.error}`)
             }
@@ -98,13 +96,13 @@ class Api {
         .then ((data)=> {
             
             const correctRecipe = document.getElementById(`${data.recipe_id}`)
-            if (!data.errors){
+            if (!data.error){
                 const newReview = new Review(data)
                 correctRecipe.innerHTML += newReview.htmlifyNewReview()
                 showCommentsFeature()
                 
             } else {
-                throw new Error(`${data.errors}`)
+                throw new Error(`Name ${data.error["name"]}`)
             }
         })
         .catch(alert)
