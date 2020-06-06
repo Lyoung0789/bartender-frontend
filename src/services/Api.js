@@ -79,10 +79,9 @@ class Api {
 
 
 
-    //This is for comments/reviews
+    
     static postReview(reviewObj){
-        
-        // debugger
+
         let configObj = {
             method: "POST",
             headers: {
@@ -96,23 +95,18 @@ class Api {
                 recipe_id: reviewObj.recipe_id
             })
         }
-        // debugger
-        // const correctRecipe = document.getElementById(`${reviewObj.recipe_id}`)
+        
         fetch("http://localhost:3000/reviews", configObj)
         
         .then(response => response.json())
         
         .then ((data)=> {
-            // debugger
+            
             const correctRecipe = document.getElementById(`${data.recipe_id}`)
             if (!data.errors){
-                // debugger
                 const newReview = new Review(data)
                 correctRecipe.innerHTML += newReview.htmlifyNewReview()
                 showCommentsFeature()
-                // debugger
-                // .renderRecipes()
-                // clearForm()
                 
             } else {
                 throw new Error(`${data.errors}`)
