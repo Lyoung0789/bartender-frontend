@@ -64,35 +64,14 @@ function showNewRecipe(){
 }
 
 function showCommentsFeature(){
-    // debugger
     const showComments = document.querySelectorAll(".comment-button")
     for(showComment of showComments){
-        // debugger
         showComment.addEventListener("click", Review.getComments)
     }
     
 }
 
-// function getComments(){
-//     // debugger
-//     const findId = document.getElementById(`${this.parentElement.id}`)
-//     const showReviewList = findId.querySelectorAll('.review-container')
 
-    
-//     if (showReviewList[0].style.display === "none"){
-//         for (container of showReviewList){
-//             container.style.display ="block"
-//         }
-        
-
-//     } else {
-//         for(container of showReviewList){
-//             container.style.display = "none"
-//         }
-        
-//     }
-
-// }
 
 
 
