@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
     Recipe.getRecipes()
     showNewRecipe()
     mountFormListener()
-    mountCommentListener() 
+    
 })
 
 const recipeList = document.querySelector(".recipe-container")
@@ -24,14 +24,6 @@ function mountFormListener(){
     })
 }
 
-// function getRecipeData(){
-//     // debugger
-//     return {
-//         title: document.querySelector("#title").value,
-//         liquor: document.querySelector("#liquor").value,
-//         instructions: document.querySelector("#instructions").value
-//     }
-// }
 
 function clearForm(){
     document.querySelector("#title").value = ""
@@ -102,30 +94,7 @@ function getComments(){
 
 }
 
-function mountCommentListener(){
 
-    let commentForm = document.querySelectorAll("#new-review-form")
-    for(comment of commentForm){
-        
-        comment.addEventListener("submit", function(event){
-            event.preventDefault()
-            
-            console.log("Review is being created")
-            //This is where i need to do some work. 
-            //getReviewData pulls in the data we wrote
-            //API.ReviewPost(reviewObj)
-            const reviewObj = {
-                name: this.name.value,
-                content: this.content.value,
-                recipe_id: this.parentElement.parentElement.id
-            }
-           
-            Api.postReview(reviewObj)
-
-        })
-    }
-
-}
 
 
 

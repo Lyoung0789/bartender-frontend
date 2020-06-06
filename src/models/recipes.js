@@ -26,7 +26,7 @@ class Recipe {
         Recipe.all.forEach(recipe => recipe.renderRecipe())
         likeFeature()
         showCommentsFeature()
-        mountCommentListener()
+        Review.mountCommentListener()
 
     }
 

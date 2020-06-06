@@ -35,6 +35,32 @@ class Review{
 
     }
 
+    //New methods, Reorganized
+    static mountCommentListener(){
+
+        let commentForm = document.querySelectorAll("#new-review-form")
+        for(const comment of commentForm){
+            
+            comment.addEventListener("submit", function(event){
+                event.preventDefault()
+                
+                console.log("Review is being created")
+                //This is where i need to do some work. 
+                //getReviewData pulls in the data we wrote
+                //API.ReviewPost(reviewObj)
+                const reviewObj = {
+                    name: this.name.value,
+                    content: this.content.value,
+                    recipe_id: this.parentElement.parentElement.id
+                }
+               
+                Api.postReview(reviewObj)
+    
+            })
+        }
+    
+    }
+
 
     
 }
