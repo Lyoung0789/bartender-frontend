@@ -1,5 +1,6 @@
 # Readme
 
+## Home Bartender
 This is the front-end javascript portion of my Home Bartender Application. The backend Rails Api, code can be found at https://github.com/Lyoung0789/bartender-backend.git. 
 
 Home Bartender is an Application where you can post your favorite cocktail recipe for other aspiring mixologists to try. 
