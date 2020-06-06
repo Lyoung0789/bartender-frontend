@@ -12,8 +12,6 @@ const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
 
 
-
-
 function mountFormListener(){
     
     recipeForm.addEventListener("submit", function(event){
@@ -33,9 +31,9 @@ function clearForm(){
 }
 
 function likeFeature(){
-    let thumbs = document.querySelectorAll(".like-glyph")
-    for(thumbs of thumbs){
-        thumbs.addEventListener("click", sendLike)
+    const thumbs = document.querySelectorAll(".like-glyph")
+    for(thumb of thumbs){
+        thumb.addEventListener("click", sendLike)
     }
 }
 
