@@ -12,9 +12,9 @@ class Review{
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return (`
             <div class="review-container" style="display:none">
-                <h4>${this.name}</h4>
-                <p>${this.created_at}<p>
-                <p>${this.content}<p>
+                <p><strong><u>${this.name}</strong></u> at <small>${this.created_at}</small></p>
+                
+                <p><ul>${this.content}</ul><p>
             </div>
         `)
     }
@@ -22,9 +22,9 @@ class Review{
     htmlifyNewReview(){
         return (`
         <div class="review-container" style="display:block">
-            <h4>${this.name}</h4>
-            <p>${this.created_at}<p>
-            <p>${this.content}<p>
+        <p><strong><u>${this.name}</strong></u> at <small>${this.created_at}</small></p>
+                
+        <p><ul>${this.content}</ul><p>
         </div>
     `)
     }
