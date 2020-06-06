@@ -1,6 +1,5 @@
 class Api {
 
-
     static get(){
         return (
             fetch('http://localhost:3000/recipes')
@@ -43,7 +42,6 @@ class Api {
         .catch(alert)
     }
 
-
     static patch(data, id){
         let configObj = {
             method: "PATCH",
@@ -77,9 +75,6 @@ class Api {
         .catch(alert)
     }
 
-
-
-    
     static postReview(reviewObj){
 
         let configObj = {

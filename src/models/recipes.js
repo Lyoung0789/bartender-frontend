@@ -11,7 +11,6 @@ class Recipe {
         Recipe.all.push(this)
     }
 
-
     static getRecipes(){
         Api.get()
         .then(recipes=> {
@@ -30,8 +29,6 @@ class Recipe {
 
     }
 
-
-
     static getRecipeData(){
         return {
             title: document.querySelector("#title").value,
@@ -39,7 +36,6 @@ class Recipe {
             instructions: document.querySelector("#instructions").value
         }
     }
-
 
     renderRecipe(){
         recipeList.innerHTML+= this.htmlifyPost()
@@ -52,7 +48,6 @@ class Recipe {
             })
         }  
     }
-
 
     htmlifyPost(){
         return(`

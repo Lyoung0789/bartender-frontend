@@ -29,30 +29,22 @@ class Review{
     `)
     }
 
-    //New methods, Reorganized
     static mountCommentListener(){
-
         let commentForm = document.querySelectorAll("#new-review-form")
         for(const comment of commentForm){
-            
+        
             comment.addEventListener("submit", function(event){
                 event.preventDefault()
-                
                 console.log("Review is being created")
-
                 const reviewObj = {
                     name: event.target.name.value,
                     content: event.target.content.value,
                     recipe_id: this.parentElement.parentElement.id
                 }
-               
                 Api.postReview(reviewObj)
-    
             })
         }
-    
     }
-
 
     static getComments(){
         const findId = document.getElementById(`${this.parentElement.id}`)

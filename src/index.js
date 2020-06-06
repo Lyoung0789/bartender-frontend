@@ -1,6 +1,5 @@
 let addRecipe = false
 
-
 document.addEventListener("DOMContentLoaded", function(){
     Recipe.getRecipes()
     displayNewRecipeForm()
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function(){
 const recipeList = document.querySelector(".recipe-container")
 const recipeForm = document.querySelector("#new-recipe-form")
 
-
 function mountFormListener(){
     recipeForm.addEventListener("submit", function(event){
         event.preventDefault()
@@ -20,7 +18,6 @@ function mountFormListener(){
         Api.post(recipeObj)
     })
 }
-
 
 function clearForm(){
     document.querySelector("#title").value = ""
