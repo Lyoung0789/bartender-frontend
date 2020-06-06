@@ -59,8 +59,8 @@ class Recipe {
             <div class="block">
                 <div class="recipe-content" id = "${this.id}">
                 <h3>${this.title}</h3>
-                <p>${this.instructions}</p>
-                <p>Main Liquor: ${this.liquor}</p>
+                <p><u>Instructions:</u> <ul>${this.instructions}</ul></p>
+                <p><u>Main Liquor:</u> <ul>${this.liquor}</ul></p>
                 <p><u>Likes:</u><span class="likes">${this.likes}</span></p>
                 <button class="like-glyph">&#128077</button> 
                 <button class="comment-button">Comments</button>
