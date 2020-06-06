@@ -6,13 +6,10 @@ class Review{
         this.content = content
         this.created_at = new Date(created_at)
         this.recipe_id = recipe_id
-        // debugger
-        
     }
 
     htmlifyReview(){
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        
         return (`
             <div class="review-container" style="display:none">
                 <h4>${this.name}</h4>
@@ -20,9 +17,6 @@ class Review{
                 <p>${this.content}<p>
             </div>
         `)
-        
-       
-        
     }
 
     htmlifyNewReview(){
@@ -33,9 +27,6 @@ class Review{
             <p>${this.content}<p>
         </div>
     `)
-    
-   
-
     }
 
     //New methods, Reorganized
@@ -72,19 +63,13 @@ class Review{
             for (const container of showReviewList){
                 container.style.display ="block"
             }
-            
-    
         } else {
             for(const container of showReviewList){
                 container.style.display = "none"
             }
-            
         }
-    
     }
 
-
-    
 }
 
 

@@ -44,9 +44,7 @@ function likeFeature(){
     }
 }
 
-
 function displayNewRecipeForm(){
-    
     const showFormButton = document.querySelector("#add-recipe-button")
     const showFormContainer = document.querySelector(".form-container")
     showFormButton.addEventListener("click", () => {
