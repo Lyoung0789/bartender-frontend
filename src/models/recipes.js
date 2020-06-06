@@ -30,18 +30,6 @@ class Recipe {
 
     }
 
-    renderRecipe(){
-        recipeList.innerHTML+= this.htmlifyPost()
-        if (this.review.length !== 0){
-            const correctRecipe = document.getElementById(`${this.id}`)
-            
-            this.review.forEach(review => {
-                let latestReview = new Review(review)
-                correctRecipe.innerHTML += latestReview.htmlifyReview()
-            })
-        }  
-    }
-
 //new functions below
 
     static getRecipeData(){
@@ -53,8 +41,17 @@ class Recipe {
     }
 // new functions above
 
-
-
+    renderRecipe(){
+        recipeList.innerHTML+= this.htmlifyPost()
+        if (this.review.length !== 0){
+            const correctRecipe = document.getElementById(`${this.id}`)
+        
+            this.review.forEach(review => {
+            let latestReview = new Review(review)
+            correctRecipe.innerHTML += latestReview.htmlifyReview()
+            })
+        }  
+    }
 
 
     htmlifyPost(){
