@@ -31,6 +31,7 @@ function clearForm(){
 }
 
 function likeFeature(){
+    // debugger
     const thumbs = document.querySelectorAll(".like-glyph")
     for(thumb of thumbs){
         thumb.addEventListener("click", sendLike)

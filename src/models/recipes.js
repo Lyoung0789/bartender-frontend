@@ -61,7 +61,7 @@ class Recipe {
                 <h3>${this.title}</h3>
                 <p>${this.instructions}</p>
                 <p>Main Liquor: ${this.liquor}</p>
-                <p class = "likes"><u>Likes:</u> ${this.likes} <u>Comments:</u> ${this.review.length}</p>
+                <p><u>Likes:</u><span class="likes">${this.likes}</span></p>
                 <button class="like-glyph">&#128077</button> 
                 <button class="comment-button">Comments</button>
                     <div class ="review-container" style="display:none">
