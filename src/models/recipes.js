@@ -14,8 +14,7 @@ class Recipe {
     static getRecipes(){
         Api.get()
         .then(recipes=> {
-            recipes.forEach(recipe => new Recipe(recipe))
-            
+            recipes.forEach(recipe => new Recipe(recipe))  
             Recipe.renderRecipes()
         })
     }
@@ -26,7 +25,6 @@ class Recipe {
         likeFeature()
         showCommentsFeature()
         Review.mountCommentListener()
-
     }
 
     static getRecipeData(){
@@ -41,7 +39,6 @@ class Recipe {
         recipeList.innerHTML+= this.htmlifyPost()
         if (this.review.length !== 0){
             const correctRecipe = document.getElementById(`${this.id}`)
-        
             this.review.forEach(review => {
             let latestReview = new Review(review)
             correctRecipe.innerHTML += latestReview.htmlifyReview()
@@ -71,8 +68,5 @@ class Recipe {
 
             </div>
         `)
-    }
-
-
-    
+    }   
 }

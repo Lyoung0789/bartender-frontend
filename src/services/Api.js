@@ -1,15 +1,15 @@
 class Api {
+    static baseURL = "http://localhost:3000/recipes"
 
     static get(){
         return (
-            fetch('http://localhost:3000/recipes')
+            fetch(Api.baseURL)
             .then (response => response.json())
         )
         
     }
 
     static post(data){
-
         let configObj = {
             method: "POST",
             headers: {
@@ -24,7 +24,7 @@ class Api {
             })
         }
 
-        fetch("http://localhost:3000/recipes", configObj)
+        fetch(Api.baseURL, configObj)
         
         .then(response => response.json())
         .then ((data)=> {
@@ -53,7 +53,7 @@ class Api {
             })
         }
         
-        fetch(`http://localhost:3000/recipes/${id}`, configObj)
+        fetch(Api.baseURL+`/${id}`, configObj)
         .then(response => response.json())
         .then((data)=> {
             if(!data.errors){
@@ -74,7 +74,6 @@ class Api {
     }
 
     static postReview(reviewObj){
-
         let configObj = {
             method: "POST",
             headers: {
